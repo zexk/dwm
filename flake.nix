@@ -13,7 +13,7 @@
           inherit system;
           overlays = [
             (final: prev: {
-              dwmJD = prev.dwm.overrideAttrs (oldAttrs: rec {
+              dwmPtch = prev.dwm.overrideAttrs (oldAttrs: rec {
                 version = "master";
                 src = ./.;
               });
@@ -29,9 +29,9 @@
           };
         };
 
-        packages.dwmJD = pkgs.dwmJD;
+        packages.dwmPtch = pkgs.dwmPtch;
         defaultApp = apps.dwm;
-        defaultPackage = pkgs.dwmJD;
+        defaultPackage = pkgs.dwmPtch;
 
         devShell = pkgs.mkShell {
           buildInputs = with pkgs; [ xorg.libX11 xorg.libXft xorg.libXinerama gcc bear ];
