@@ -1,19 +1,17 @@
 {
-  description = "A very basic flake";
-
+  description = "dwm nix flake";
+  
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
+  outputs = { self, nixpkgs }:
       let
         pkgs = import nixpkgs {
-          inherit system;
+          system = "x86_64-linux";
           overlays = [
             (final: prev: {
-              dwmPtch = prev.dwm.overrideAttrs (oldAttrs: rec {
+              dwmPtch = prev.dwm.overrideAttrs (oldAttrs: {
                 version = "master";
                 src = ./.;
               });
@@ -21,21 +19,13 @@
           ];
         };
       in
-      rec {
-        apps = {
-          dwm = {
-            type = "app";
-            program = "${defaultPackage}/bin/st";
-          };
-        };
+      {
 
-        packages.dwmPtch = pkgs.dwmPtch;
-        defaultApp = apps.dwm;
-        defaultPackage = pkgs.dwmPtch;
+        packages.x86_64-linux.dwmPtch = pkgs.dwmPtch;
+        packages.x86_64-linux.default = pkgs.dwmPtch;
 
-        devShell = pkgs.mkShell {
+        devShell.x86_64-linux = pkgs.mkShell {
           buildInputs = with pkgs; [ xorg.libX11 xorg.libXft xorg.libXinerama gcc bear ];
         };
-      }
-    );
+      };
 }
