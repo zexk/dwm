@@ -8,11 +8,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "tewi2x:antialiasing=false" };
 static const char dmenufont[]       = "tewi2x:antialiasing=false";
-static const char col_dark1[]       = "#1c1529";
-static const char col_dark2[]       = "#3c3056";
-static const char col_dark3[]       = "#7a69a0";
-static const char col_dark4[]       = "#9887be";
-static const char col_violet[]        = "#d3c8ea";
+static const char col_gray1[]       = "#1c1529";
+static const char col_gray2[]       = "#3c3056";
+static const char col_gray3[]       = "#7a69a0";
+static const char col_gray4[]       = "#9887be";
+static const char col_cyan[]        = "#d3c8ea";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_dark3, col_dark1, col_dark2 },
