@@ -1,5 +1,16 @@
 dwm - dynamic window manager
 ============================
+
+Patches installed
+-----------------
+actualfullscreen
+alwayscenter
+fibonacci
+fullgaps
+noborder
+
+
+
 dwm is an extremely fast, small, and dynamic window manager for X.
 
 
