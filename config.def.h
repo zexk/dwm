@@ -6,6 +6,7 @@ static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
++static const int user_bh            = 2;        /* 2 is the default spacing around the bar's font */
 static const char *fonts[]          = { "tewi:antialiasing=false" };
 static const char dmenufont[]       = "tewi:antialiasing=false";
 static const char col_gray1[]       = "#1c1529";
@@ -66,10 +67,7 @@ static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } }, { MODKEY,                       XK_Return, spawn,          {.v = termcmd } }, { MODKEY,                       XK_b,      togglebar,      {0} }, { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
