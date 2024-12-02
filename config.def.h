@@ -17,7 +17,7 @@ static const char col_cyan[]        = "#d3c8ea";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray1, col_cyan,  col_cyan },
+	[SchemeSel]  = { col_cyan, col_gray1,  col_gray4 },
 };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
