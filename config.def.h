@@ -6,13 +6,14 @@ static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const int user_bh            = 4;        /* 2 is the default spacing around the bar's font */
 static const char *fonts[]          = { "ProTamsyn2x:antialiasing=false" };
 static const char dmenufont[]       = "ProTamsyn2x:antialiasing=false";
 static const char col_gray1[]       = "#1c1529";
 static const char col_gray2[]       = "#211a30";
 static const char col_gray3[]       = "#3c3056";
 static const char col_gray4[]       = "#4d3f6d";
-static const char col_cyan[]        = "#efeaf9";
+static const char col_cyan[]        = "#d3c8ea";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
