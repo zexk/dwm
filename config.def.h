@@ -6,7 +6,7 @@ static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh            = 4;        /* 2 is the default spacing around the bar's font */
+static const int user_bh            = 8;        /* 2 is the default spacing around the bar's font */
 static const char *fonts[]          = { "ProTamsyn2x:antialiasing=false" };
 static const char dmenufont[]       = "ProTamsyn2x:antialiasing=false";
 static const char col_gray1[]       = "#1c1529";
