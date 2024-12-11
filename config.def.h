@@ -7,8 +7,8 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 8;        /* 2 is the default spacing around the bar's font */
-static const char *fonts[]          = { "ProTamsyn2x:antialiasing=false" };
-static const char dmenufont[]       = "ProTamsyn2x:antialiasing=false";
+static const char *fonts[]          = { "CozetteHiDpi:antialiasing=false:size=26" };
+static const char dmenufont[]       = "CozetteHiDpi:antialiasing=false:size=26";
 static const char col_gray1[]       = "#1c1529";
 static const char col_gray2[]       = "#211a30";
 static const char col_gray3[]       = "#3c3056";
@@ -75,6 +75,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_minus,  incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_r,      reorganizetags, {0} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
