@@ -7,7 +7,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 8;        /* 2 is the default spacing around the bar's font */
-static const char *fonts[]          = { "CozetteHiDpi:antialiasing=false:size=26" };
+static const char *fonts[]          = { "Cozette:antialiasing=false:size=13" };
 static const char dmenufont[]       = "CozetteHiDpi:antialiasing=false:size=26";
 static const char col_gray1[]       = "#1c1529";
 static const char col_gray2[]       = "#211a30";
