@@ -9,20 +9,20 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 3;        /* 2 is the default spacing around the bar's font */
 static const char *fonts[]          = { "PixelCode:antialiasing=false:size=14" };
 static const char dmenufont[]       = "PixelCode:antialiasing=false:size=28";
-static const char col_gray1[]       = "#1c1529";
-static const char col_gray2[]       = "#211a30";
-static const char col_gray3[]       = "#3c3056";
-static const char col_gray4[]       = "#4d3f6d";
-static const char col_cyan[]        = "#d3c8ea";
+static const char col_gray1[]       = "#120818";
+static const char col_gray2[]       = "#3e1f51";
+static const char col_gray3[]       = "#653982";
+static const char col_gray4[]       = "#8a56ab";
+static const char col_cyan[]        = "#f7edfe";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray1 },
 	[SchemeSel]  = { col_cyan, col_gray1,  col_cyan },
 	[SchemeStatus]  = { col_gray3, col_gray1,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]  = { col_gray4, col_cyan,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+	[SchemeTagsSel]  = { col_cyan, col_gray1,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
 	[SchemeTagsNorm]  = { col_gray3, col_gray1,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-	[SchemeInfoSel]  = { col_gray4, col_cyan,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-	[SchemeInfoNorm]  = { col_gray3, col_gray1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+	[SchemeInfoSel]  = { col_gray3, col_cyan,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+	[SchemeInfoNorm]  = { col_cyan, col_gray1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
@@ -77,7 +77,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_u,      spawn,          SHCMD("maim --select | xclip -selection clipboard -t image/png")},
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
+	{ MODKEY,                       XK_Escape, togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
